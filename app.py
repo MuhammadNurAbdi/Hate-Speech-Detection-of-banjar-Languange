@@ -45,7 +45,7 @@ def main():
             predictor = pickle.load(f)
         prediction = predictor.predict(vect_text)
         final_result = get_key(prediction, prediction_labels)
-        if prediction_labels = 0
+        if prediction_labels == 0
         st.success("Kalimat Termasuk:: {}".format(final_result))
         else
         st.error("Kalimat Termasuk:: {}".format(final_result))
