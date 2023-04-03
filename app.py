@@ -46,9 +46,9 @@ def main():
         prediction = predictor.predict(vect_text)
         final_result = get_key(prediction, prediction_labels)
         print(prediction_labels)
-        if prediction_labels == '0':
+        if final_result == 'Bukan Ujaran Kebencian':
             st.success("Kalimat Termasuk:: {}".format(final_result))
-        if prediction_labels == '1':
+        if final_result == 'Ujaran Kebencian':
             st.error("Kalimat Termasuk:: {}".format(final_result))
 
 if __name__ == '__main__':
