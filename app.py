@@ -36,10 +36,10 @@ def get_key(val, my_dict):
 
 
 def main():
-    st.title("Deteksi Ujaran Kebencian Bahasa Banjar")
+    st.title("TF-IDF dan SVM Deteksi Ujaran Kebencian Bahasa Banjar")
     news_text = st.text_area("Masukan Kalimat Berbahasa Banjar", "Masuk akan disini")
     prediction_labels = {'Ujaran Kebencian': 1, 'Bukan Ujaran Kebencian': 0}
-    if st.button("Klasifikasikan"):
+    if st.button("Classify"):
         vect_text = tfidf.transform([news_text])
         with open('model.pkl', 'rb') as f:
             predictor = pickle.load(f)
